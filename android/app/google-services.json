@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "272487133769",
+    "project_id": "travel-app-burrahh",
+    "storage_bucket": "travel-app-burrahh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272487133769:android:10d42ea49152700ca4c598",
+        "android_client_info": {
+          "package_name": "com.example.travellio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfhXKH2Lzak4_ivBC01E7phal-XGpROx8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
