@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'package:travellio/app/screens/sign_up/sign_up_binding.dart';
 import 'package:travellio/app/screens/sign_up/sign_up_view.dart';
 
+import '../screens/home/home_binding.dart';
+import '../screens/home/home_view.dart';
 import '../screens/login/login_binding.dart';
 import '../screens/login/login_view.dart';
 
@@ -15,12 +17,12 @@ class AppPages {
   static const INITIAL = Routes.HOME;
 
   static final routes = [
-    // GetPage(
-    //   name: _Paths.HOME,
-    //   page: () => HomeView(),
-    //   binding: HomeBinding(),
-    //   transition: Transition.fadeIn,
-    // ),
+    GetPage(
+      name: _Paths.HOME,
+      page: () => HomeView(),
+      binding: HomeBinding(),
+      transition: Transition.fadeIn,
+    ),
     GetPage(
       name: _Paths.LOGIN,
       page: () => const LoginView(),

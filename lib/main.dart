@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'app/routes/app_pages.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -13,6 +12,10 @@ void main() async {
   runApp(StreamBuilder<User?>(
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, snapshot) {
+        print('User: ${FirebaseAuth.instance.currentUser}');
+
+        print('Snapshot data: ${snapshot.data}');
+
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const MaterialApp(
               home: Scaffold(
@@ -21,7 +24,6 @@ void main() async {
             ),
           ));
         }
-
         return GetMaterialApp(
           title: 'Travellio',
           debugShowCheckedModeBanner: true,
