@@ -126,7 +126,7 @@ class LoginView extends GetView<LoginController> {
                                     ),
                                     decoration: InputDecoration(
                                       border: InputBorder.none,
-                                      hintText: "***********",
+                                      hintText: "*****",
                                       hintStyle: TextStyle(
                                         fontFamily: 'inter',
                                         fontSize: 14,

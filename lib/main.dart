@@ -25,7 +25,8 @@ void main() async {
         return GetMaterialApp(
           title: 'Travellio',
           debugShowCheckedModeBanner: true,
-          initialRoute: snapshot.data != null ? Routes.HOME : Routes.LOGIN,
+         // initialRoute: snapshot.data != null ? Routes.HOME : Routes.LOGIN,
+         initialRoute: Routes.CHATROOM,
           getPages: AppPages.routes,
           theme: ThemeData(
             scaffoldBackgroundColor: Colors.white,
