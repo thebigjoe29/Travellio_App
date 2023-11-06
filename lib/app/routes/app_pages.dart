@@ -1,6 +1,8 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:get/get.dart';
+import 'package:travellio/app/screens/chatroom/chatroom_binding.dart';
+import 'package:travellio/app/screens/chatroom/chatroom_view.dart';
 import 'package:travellio/app/screens/sign_up/sign_up_binding.dart';
 import 'package:travellio/app/screens/sign_up/sign_up_view.dart';
 
@@ -33,5 +35,6 @@ class AppPages {
       page: () => const SignUpView(),
       binding: SignUpBinding(),
     ),
+    GetPage(name: _Paths.CHATROOM, page: () => Chatroom(),binding: ChatroomBinding())
   ];
 }

@@ -40,7 +40,7 @@ class LoginController extends GetxController {
         if (credential.user != null) {
           if (credential.user!.emailVerified) {
             isLoading.value = false;
-            Get.offAllNamed(Routes.HOME);
+            Get.offAllNamed(Routes.CHATROOM);
           } else {
             Get.defaultDialog(
               content: const Text("Send verification Email"),
@@ -66,6 +66,7 @@ class LoginController extends GetxController {
           }
         }
         isLoading.value = false;
+       
       } on FirebaseAuthException catch (e) {
         isLoading.value = false;
         if (e.code == 'user-not-found') {
