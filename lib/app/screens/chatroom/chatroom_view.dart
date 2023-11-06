@@ -5,21 +5,22 @@ import 'package:get/get.dart';
 import 'package:travellio/app/screens/chatroom/chatroom_controller.dart';
 //import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:travellio/app/utils/buildLayout/buildLayout_controller.dart';
 
-class Chatroom extends GetView<Chatroomcontroller> {
-  const Chatroom({Key? key}) : super(key: key);
-
+class Chatroom extends GetView<BuildLayoutController> {
+   Chatroom({Key? key}) : super(key: key);
+  final Chatroomcontroller chatroomcontroller=Get.put(Chatroomcontroller());
   @override
   
   Widget build(BuildContext context) {
-    var currentUser=controller.auth.currentUser;  
+    var currentUser=chatroomcontroller.auth.currentUser;  
     print(currentUser);
     return Scaffold(
       body: Column(
         children: [
           Expanded(
             child: StreamBuilder(
-              stream: controller.storeInstance.collection("chatroom").orderBy('timestamp',descending: true).snapshots(),
+              stream: chatroomcontroller.storeInstance.collection("chatroom").orderBy('timestamp',descending: true).snapshots(),
               builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
                 if (snapshot.hasError) {
                   // Handle error
@@ -84,13 +85,13 @@ class Chatroom extends GetView<Chatroomcontroller> {
                                           : Colors.green,
                                       borderRadius: isCurrentUserMessage
                                           ? BorderRadius.only(
-                                              topLeft: controller.radius,
-                                              bottomLeft: controller.radius,
-                                              bottomRight: controller.radius)
+                                              topLeft: chatroomcontroller.radius,
+                                              bottomLeft: chatroomcontroller.radius,
+                                              bottomRight: chatroomcontroller.radius)
                                           : BorderRadius.only(
-                                              topRight: controller.radius,
-                                              bottomLeft: controller.radius,
-                                              bottomRight: controller.radius),
+                                              topRight: chatroomcontroller.radius,
+                                              bottomLeft: chatroomcontroller.radius,
+                                              bottomRight: chatroomcontroller.radius),
                                     ),
                                     child: Center(
                                         child: Padding(

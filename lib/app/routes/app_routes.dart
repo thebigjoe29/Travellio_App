@@ -10,6 +10,7 @@ abstract class Routes {
   static const FORGOT = _Paths.FORGOT;
   static const SIGNUP = _Paths.FORGOT;
   static const CHATROOM=_Paths.CHATROOM;
+  static const SAVEDTRIPS = _Paths.SAVEDTRIPS;
 }
 
 abstract class _Paths {
@@ -18,4 +19,5 @@ abstract class _Paths {
   static const FORGOT = '/forgot';
   static const SIGNUP = '/signup';
   static const CHATROOM='/chatroom';
+  static const SAVEDTRIPS = '/savedtrips';
 }
